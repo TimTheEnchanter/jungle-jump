@@ -71,7 +71,15 @@ scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (spri
     tiles.setTileAt(location, assets.tile`transparency16`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest2`, function (sprite, location) {
-    game.over(true)
+    scene.setBackgroundImage(assets.image`background2`)
+    tiles.setTilemap(tilemap`level31`)
+    animation.runMovementAnimation(
+    mySprite,
+    animation.animationPresets(animation.flyToCenter),
+    2000,
+    false
+    )
+    mySprite.say("Level 3!", 500)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`background2`)
@@ -90,6 +98,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`poison pit`, function (sprite
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`bounce`, function (sprite, location) {
     tiles.setWallAt(location, false)
     tiles.setTileAt(location, assets.tile`transparency16`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`chest3`, function (sprite, location) {
+    game.over(true)
 })
 let projectile: Sprite = null
 let mySprite: Sprite = null

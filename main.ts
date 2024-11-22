@@ -104,6 +104,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`chest3`, function (sprite, lo
 })
 let projectile: Sprite = null
 let mySprite: Sprite = null
+game.splash("Jungle Jump", "Up - Jump | A - Create Box | B - Bomb")
 scene.setBackgroundImage(assets.image`background`)
 tiles.setTilemap(tilemap`level1`)
 mySprite = sprites.create(assets.image`stand`, SpriteKind.Player)

@@ -71,7 +71,7 @@ scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (spri
     tiles.setTileAt(location, assets.tile`transparency16`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest2`, function (sprite, location) {
-    scene.setBackgroundImage(assets.image`background2`)
+    scene.setBackgroundImage(assets.image`background`)
     tiles.setTilemap(tilemap`level31`)
     animation.runMovementAnimation(
     mySprite,
